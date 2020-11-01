@@ -1,0 +1,50 @@
+<html lang="es">
+
+<head>
+	<title>Kevin App-Express</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<h3 class="title-app">Kevin App-Express</h3>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="card-form col offset-s3 s6">
+
+				<h5>Login</h5>
+				<form method="POST" action="/login">
+					<div class="row">
+						<div class="input-field col s12">
+							  <input id="email" name="email" type="email" class="validate" required>
+							  <label for="email">Correo electrónico</label>
+						</div>
+						<div class="input-field col s12">
+							  <input id="password" name="password" type="password" class="validate" required>
+							  <label for="password">Password</label>
+						</div>
+					</div>
+					<button class="waves-effect waves-light btn">Login</button>
+				</form>
+				
+				<div>
+					<a href="/singup">No tengo cuenta</a>
+				</div>
+                
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>

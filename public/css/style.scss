@@ -1,0 +1,33 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #303030;
+    color: white;
+}
+.title-app {
+    font-weight: bold;
+    text-align: center;
+}
+a {
+    color: #00B7FF;
+}
+#mapa-id {
+    height: 500px;
+    border-radius: 200px;
+}
+input, .helper-text {
+    color: white !important;
+}
+
+.fichaMarkerMapa {
+    text-align: center;
+}
+
+.card-form {
+    padding: 20px !important;
+    box-shadow: 0 6px 9px #00000029;
+    background-color: #00000029;
+
+    h5 {
+        font-weight: bold;
+    }
+}

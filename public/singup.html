@@ -1,0 +1,77 @@
+<html lang="es">
+
+<head>
+	<title>Kevin App-Express</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<h3 class="title-app">Kevin App-Express</h3>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="card-form col offset-s3 s6">
+ 
+				<h5>Crear usuario</h5>
+				<form id="form-singup" onsubmit="return sendFormSingUp()" method="POST" action="/users">
+					<div class="row">
+                        <div class="input-field col s6">
+                            <input id="nombre" name="nombre" type="text" class="validate" autocomplete="off" required>
+							<label for="nombre">Nombre</label>
+							<span class="helper-text" data-error="Campo requerido"></span>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="apellido" name="apellido" type="text" class="validate" autocomplete="off" required>
+							<label for="apellido">Apellido</label>
+							<span class="helper-text" data-error="Campo requerido"></span>
+                        </div>
+						<div class="input-field col s12">
+							  <input id="email" name="email" type="email" class="validate" autocomplete="off" required>
+							  <label for="email">Correo electrónico</label>
+							  <span class="helper-text" data-error="Correo electrónico inválido" data-success="¡Correo electrónico válido!"></span>
+						</div>
+						<div class="input-field col s12">
+							  <input id="password" name="password" type="password" class="validate" autocomplete="off" required>
+							  <label for="password">Password</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="password_confirm" name="password_confirm" type="password" class="validate" autocomplete="off" required>
+                            <label for="password_confirm">Confirmar Password</label>
+                        </div>
+					</div>
+					<button class="waves-effect waves-light btn">Aceptar</button>
+				</form>
+				
+				<div>
+					<a href="/login">Ya tengo cuenta</a>
+				</div>
+                
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<script type="text/javascript">
+		function sendFormSingUp () {
+			let password = $("#password").val();
+			let password_confirm = $("#password_confirm").val();
+			if(password != password_confirm) {
+				alert("Su contraseña no coincide.");
+				return false;
+			}
+			return true;
+		}
+	</script>
+
+</body>
+
+</html>
